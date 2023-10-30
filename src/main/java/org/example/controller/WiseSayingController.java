@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class WiseSayingController {
-      WiseSayingService wiseSayingService = new WiseSayingService();
+    WiseSayingService wiseSayingService = new WiseSayingService();
 
     public void write() {
         System.out.print("내용: ");
@@ -22,6 +22,7 @@ public class WiseSayingController {
 
 
     }
+
     public void list() {
         List<WiseSaying> wiseSayingList = wiseSayingService.findByAll();
 
@@ -35,6 +36,7 @@ public class WiseSayingController {
             }
         }
     }
+
     public void remove() {
         System.out.print("삭제할 번호를 입력: ");
         long id = Long.parseLong(Container.getScanner().nextLine());
@@ -50,6 +52,7 @@ public class WiseSayingController {
 
         System.out.println(id + "번 명언이 삭제되었습니다.");
     }
+
     public void modify() {
         System.out.println("수정할 번호를 입력: ");
         long id = Long.parseLong(Container.getScanner().nextLine());

@@ -8,6 +8,7 @@ public class Container {
     Container(Scanner sc) {
         this.sc = sc;
     }
+
     public static void init() {
         sc = new Scanner(System.in);
     }
