@@ -1,12 +1,10 @@
-package org.example.controller;
+package org.example.wiseSaying.controller;
 
 import org.example.Container;
-import org.example.entity.WiseSaying;
-import org.example.service.WiseSayingService;
+import org.example.wiseSaying.entity.WiseSaying;
+import org.example.wiseSaying.service.WiseSayingService;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class WiseSayingController {
     WiseSayingService wiseSayingService = new WiseSayingService();

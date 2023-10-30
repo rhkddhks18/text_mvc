@@ -1,7 +1,7 @@
-package org.example.service;
+package org.example.wiseSaying.service;
 
-import org.example.entity.WiseSaying;
-import org.example.repository.WiseSayingRepository;
+import org.example.wiseSaying.entity.WiseSaying;
+import org.example.wiseSaying.repository.WiseSayingRepository;
 
 import java.util.List;
 

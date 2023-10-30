@@ -1,17 +1,14 @@
 package org.example;
 
-import org.example.controller.WiseSayingController;
-import org.example.entity.WiseSaying;
+import org.example.member.controller.MemberController;
+import org.example.wiseSaying.controller.WiseSayingController;
 import org.example.system.SystemController;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class App {
     static void run() {
         SystemController systemController = new SystemController();
         WiseSayingController wiseSayingController = new WiseSayingController();
+        MemberController memberController = new MemberController();
         System.out.println("==명언 앱==");
         while (true) {
             System.out.print("명령) ");
@@ -20,6 +17,15 @@ public class App {
                 case "종료":
                     systemController.exit();
                     return;
+                case "회원가입":
+                    memberController.join();
+                    break;
+                case "로그인":
+                    memberController.login();
+                    break;
+                case "로그아웃":
+                    memberController.logout();
+                    break;
                 case "등록":
                     wiseSayingController.write();
                     break;
