@@ -1,5 +1,12 @@
 package org.example.member.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
 public class Member {
     private long id;
     private String userId;
@@ -12,15 +19,4 @@ public class Member {
         this.regDate = regDate;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 }
