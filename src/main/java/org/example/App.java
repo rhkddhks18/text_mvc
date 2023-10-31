@@ -1,11 +1,20 @@
 package org.example;
 
+import org.example.db.DBConnection;
 import org.example.member.controller.MemberController;
 import org.example.wiseSaying.controller.WiseSayingController;
 import org.example.system.SystemController;
 
 public class App {
-    static void run() {
+    App () {
+        DBConnection.DB_NAME = "proj2";
+        DBConnection.DB_USER = "root";
+        DBConnection.DB_PASSWORD = "";
+        DBConnection.DB_PORT = 3306;
+
+        Container.getDBconnection().connect();
+    }
+    void run() {
         SystemController systemController = new SystemController();
         WiseSayingController wiseSayingController = new WiseSayingController();
         MemberController memberController = new MemberController();

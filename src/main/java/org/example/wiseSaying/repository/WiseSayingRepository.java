@@ -1,14 +1,16 @@
 package org.example.wiseSaying.repository;
 
+import org.example.Container;
+import org.example.db.DBConnection;
 import org.example.wiseSaying.entity.WiseSaying;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class WiseSayingRepository {
-
-    private List<WiseSaying> wiseSayingList;
     long id = 0;
+    private List<WiseSaying> wiseSayingList;
 
     public WiseSayingRepository() {
         wiseSayingList = new ArrayList<>();
@@ -18,7 +20,6 @@ public class WiseSayingRepository {
         id++;
         WiseSaying wiseSaying = new WiseSaying(id, author, content);
         wiseSayingList.add(wiseSaying);
-
 
         return id;
     }
